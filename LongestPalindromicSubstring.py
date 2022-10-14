@@ -5,7 +5,6 @@ class Solution:
 
     indices = [0, 0]
 
-    # Returns [start, end] indices of the longest palindrome extended from s[i..j]
     def extend(s: str, i: int, j: int) -> Tuple[int, int]:
       while i >= 0 and j < len(s):
         if s[i] != s[j]:
