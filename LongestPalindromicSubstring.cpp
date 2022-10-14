@@ -3,8 +3,6 @@ class Solution {
   string longestPalindrome(string s) {
     if (s.empty())
       return "";
-
-    // [start, end] indices of the longest palindrome in s
     pair<int, int> indices{0, 0};
 
     for (int i = 0; i < s.length(); ++i) {
@@ -22,8 +20,7 @@ class Solution {
   }
 
  private:
-  // Returns [start, end] indices of the longest palindrome extended from
-  // s[i..j]
+  
   pair<int, int> extend(const string& s, int i, int j) {
     for (; i >= 0 && j < s.length(); --i, ++j)
       if (s[i] != s[j])
